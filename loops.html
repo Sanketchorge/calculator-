@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var calculator = true;
+        while(calculator){
+            var ch = parseInt(window.prompt('select any one option from following :\n 1)Add \n 2)sub \n 3)Mul \n 4)Div \n5)Exit'));
+            switch(ch){
+                        case 1 : var num1 = parseInt(window.prompt('Enter the first number'));
+                                 var num2 = parseInt(window.prompt('enter the second number'));
+                                 alert(num1 + num2);
+                                 break;
+            
+
+                         case 2 : var num1 = parseInt(window.prompt('Enter the first number'));
+                                  var num2 = parseInt(window.prompt('enter the second number'));
+                                  alert(num1 - num2);
+                                  break;
+
+                         case 3 : var num1 = parseInt(window.prompt('Enter the first number'));
+                                  var num2 = parseInt(window.prompt('enter the second number'));
+                                  alert(num1 * num2);
+                                  break;
+
+                         case 4 : var num1 = parseInt(window.prompt('Enter the first number'));
+                                  var num2 = parseInt(window.prompt('enter the second number'));
+                                  alert(num1 / num2);
+                                  break;
+
+                         case 5 : alert('Thank you for using calculator');
+                                  calculator = false;
+                                  break;
+
+
+                        default : alert('Invalid choice');
+            }
+
+        }
+    </script>
+</body>
+</html>
