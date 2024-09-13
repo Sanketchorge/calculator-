@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loadposts()">
+    <div id="mainDiv" class="flex justify-center items-center flex-wrap gap-2 h-[100vh] w-[100vw]"></div>
+    <h1 class="text-center text-6xl text mt-10 text-blue-600">Recent posts</h1>
+
+
+
+
+    <script>
+        function loadposts(){
+           var server =  new XMLHttpRequest()
+
+           server.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                var res = this.responseText;
+                var mainData = JSON.parse(res);
+                console.log("response",mainData)
+
+                mainData.map((posts, i) =>{
+                    document.querySelector('#mainDiv').innerHTML=`
+                    <div>
+                        <h3>${posts.title}</h3>
+                        <p>${posts.body}</p>
+                        </div>
+                    `
+                })
+
+                
+                
+                
+            }
+           }
+           server.open('GET', 'https://jsonplaceholder.typicode.com/posts', true)
+           server.send();
+
+        }
+
+
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

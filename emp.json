@@ -1,0 +1,24 @@
+{
+    "employees :" [
+        {
+            "id" :1,
+            "name" : "emp1",
+            "role" : "full stack developer"
+        },
+        {
+            "id" :2,
+            "name" : "emp2",
+            "role" : "Web Developer"
+        },
+        {
+            "id" :3,
+            "name" : "emp3",
+            "role" : "Python developer"
+        },
+        {
+            "id" :4,
+            "name" : "emp4",
+            "role" : "UI UX developer"
+        };
+    ]
+}

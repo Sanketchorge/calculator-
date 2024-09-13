@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #results{
+        background-color: coral;
+        color: white;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+
+
+
+
+<body>
+    <div id="results">
+    <h1 id="result"></h1>
+</div>
+    <script>
+        var calculator = true;
+            var ch = parseInt(window.prompt("Select any one option from the following: \n 1)Add \n 2)Substract \n 3)Multiply \n 4)Division \n 5)Exit"));
+            let result
+            switch(ch){
+                case 1 : var num1 = parseInt(window.prompt("Enter the first number"));
+                         var num2 =parseInt(window.prompt("Enter the seconf number"));
+                          result=num1+num2
+                        // alert(result)
+                         break;
+                    
+                case 2 : var num1 = parseInt(window.prompt("Enter yhe first number"));
+                         var num2 = parseInt(window.prompt("Enter the second number"));
+                          result=num1-num2;
+                         break;
+
+                case 3 : var num1 = parseInt(window.prompt("Enter the first number"));
+                         var num2 = parseInt(window.prompt("Enter the second number"));
+                          result=num1*num2;
+                         alert(num1 * num2);
+                         break;
+
+                case 4 : var num1 = parseInt(window.prompt("Enter the first number"));
+                         var num2 = parseInt(window.prompt("Enter the second number"));
+                          result=num1/num2;
+                         alert(num1 / num2 );
+                         break;
+
+                case 5 : alert("thank you for using calculator")
+                         calculator = false;
+                         break;
+
+                default : alert("Invalid choice");
+
+            }
+            document.querySelector("#result").innerHTML=`Reslt = ${result}`
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
